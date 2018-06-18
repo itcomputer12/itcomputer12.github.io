@@ -73,6 +73,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/atom.xml" title="arunyang" type="application/atom+xml" />
 
@@ -81,18 +83,18 @@
 
 
 
-<meta name="description" content="[TOC] 1.1初识node.js(1)1.流行的语言排行站点123https://code.google.com/https://archive.codeplex.com/https://www.codeproject.com/ 2.nodejs官网1http://www.dcloud.io/ #hbuilder代码提示功能 3.Javascript是其编程语言123虚拟机性能：Google">
+<meta name="description" content="1_1.1 代码循环示例1234console.log(&apos;111&apos;);for(var i=0;i&amp;lt;10;i++)&amp;#123;    console.log(i)&amp;#125; node启动httpserver2_1.1 node启动httpserver123456var http=require(&quot;http&quot;);http.createServer(function (req,res) &amp;#">
 <meta property="og:type" content="website">
-<meta property="og:title" content="﻿node.js初识和特性">
+<meta property="og:title" content="﻿test1">
 <meta property="og:url" content="http://www.arunyang.com/about/expmaple1.html">
 <meta property="og:site_name" content="arunyang">
-<meta property="og:description" content="[TOC] 1.1初识node.js(1)1.流行的语言排行站点123https://code.google.com/https://archive.codeplex.com/https://www.codeproject.com/ 2.nodejs官网1http://www.dcloud.io/ #hbuilder代码提示功能 3.Javascript是其编程语言123虚拟机性能：Google">
+<meta property="og:description" content="1_1.1 代码循环示例1234console.log(&apos;111&apos;);for(var i=0;i&amp;lt;10;i++)&amp;#123;    console.log(i)&amp;#125; node启动httpserver2_1.1 node启动httpserver123456var http=require(&quot;http&quot;);http.createServer(function (req,res) &amp;#">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://www.arunyang.com/about/index_files/28354480.png">
-<meta property="og:updated_time" content="2018-06-18T04:03:40.000Z">
+<meta property="og:updated_time" content="2018-06-18T05:59:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="﻿node.js初识和特性">
-<meta name="twitter:description" content="[TOC] 1.1初识node.js(1)1.流行的语言排行站点123https://code.google.com/https://archive.codeplex.com/https://www.codeproject.com/ 2.nodejs官网1http://www.dcloud.io/ #hbuilder代码提示功能 3.Javascript是其编程语言123虚拟机性能：Google">
+<meta name="twitter:title" content="﻿test1">
+<meta name="twitter:description" content="1_1.1 代码循环示例1234console.log(&apos;111&apos;);for(var i=0;i&amp;lt;10;i++)&amp;#123;    console.log(i)&amp;#125; node启动httpserver2_1.1 node启动httpserver123456var http=require(&quot;http&quot;);http.createServer(function (req,res) &amp;#">
 <meta name="twitter:image" content="http://www.arunyang.com/about/index_files/28354480.png">
 
 
@@ -129,7 +131,7 @@
 
 
 
-  <title>﻿node.js初识和特性 | arunyang</title>
+  <title>﻿test1 | arunyang</title>
   
 
 
@@ -293,7 +295,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">﻿node.js初识和特性</h1>
+	<h1 class="post-title" itemprop="name headline">﻿test1</h1>
 
 
 
@@ -305,12 +307,8 @@
       <div class="post-body">
         
         
-          <p>﻿<br>[TOC]</p>
-<h1 id="1-1初识node-js-1"><a href="#1-1初识node-js-1" class="headerlink" title="1.1初识node.js(1)"></a>1.1初识node.js(1)</h1><p>1.流行的语言排行站点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://code.google.com/</span><br><span class="line">https://archive.codeplex.com/</span><br><span class="line">https://www.codeproject.com/</span><br></pre></td></tr></table></figure></p>
-<p>2.nodejs官网<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.dcloud.io/ #hbuilder代码提示功能</span><br></pre></td></tr></table></figure></p>
-<p>3.Javascript是其编程语言<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">虚拟机性能：Google V8本身使用了一些最新的编译技术，使得Js运行效率相当高；</span><br><span class="line">开发成本：Javascript活跃于浏览器上，使用人数多，入门成本较低；</span><br><span class="line">没有历史包袱：Javascript单线程，没有服务端的IO处理，没有各种历史存在的库。</span><br></pre></td></tr></table></figure></p>
-<p>##1_1</p>
-<h3 id="js循环"><a href="#js循环" class="headerlink" title="js循环"></a>js循环</h3><p>1_1.1 代码循环示例<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'111'</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+          <p>﻿</p>
+<p>1_1.1 代码循环示例<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'111'</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="node启动httpserver"><a href="#node启动httpserver" class="headerlink" title="node启动httpserver"></a>node启动httpserver</h3><p>2_1.1 node启动httpserver<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http=<span class="built_in">require</span>(<span class="string">"http"</span>);</span><br><span class="line">http.createServer(<span class="function"><span class="keyword">function</span> (<span class="params">req,res</span>) </span>&#123;</span><br><span class="line">    res.write(<span class="string">"webcome to arun\'s world!"</span>);</span><br><span class="line">    res.end();</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"aaaa"</span>);</span><br><span class="line">&#125;).listen(<span class="number">8999</span>);</span><br></pre></td></tr></table></figure></p>
 <p>##2_1</p>
 <h3 id="Js同步异步"><a href="#Js同步异步" class="headerlink" title="Js同步异步"></a>Js同步异步</h3><h4 id="2-1-1-输出文件夹下文件"><a href="#2-1-1-输出文件夹下文件" class="headerlink" title="2_1.1 输出文件夹下文件"></a>2_1.1 输出文件夹下文件</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这是一个异步的过程:输出文件夹下的文件</span></span><br><span class="line"><span class="keyword">var</span> fs=<span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line">fs.readdir(<span class="string">"."</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, filenames</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; filenames.length; i++) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(filenames[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'End.'</span>);</span><br></pre></td></tr></table></figure>
@@ -460,6 +458,32 @@
 
           
           
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript" title="MDN" target="_blank">MDN</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ttlsa.com" title="运维生存时间" target="_blank">运维生存时间</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://zhuanlan.zhihu.com/eleme-arch" title="ELE框架工具部" target="_blank">ELE框架工具部</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://zhuanlan.zhihu.com/ElemeFE" title="ELE前端" target="_blank">ELE前端</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
 
           
 
@@ -476,7 +500,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-1初识node-js-1"><span class="nav-number">1.</span> <span class="nav-text">1.1初识node.js(1)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#js循环"><span class="nav-number">1.0.1.</span> <span class="nav-text">js循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#node启动httpserver"><span class="nav-number">1.0.2.</span> <span class="nav-text">node启动httpserver</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Js同步异步"><span class="nav-number">1.0.3.</span> <span class="nav-text">Js同步异步</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-输出文件夹下文件"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">2_1.1 输出文件夹下文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-js程序模块化和程序可读性"><span class="nav-number">1.0.3.2.</span> <span class="nav-text">2_1.2 js程序模块化和程序可读性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-js封装继承多态经典案例"><span class="nav-number">1.0.3.3.</span> <span class="nav-text">2_1.3 js封装继承多态经典案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4-js同步异步区别"><span class="nav-number">1.0.3.4.</span> <span class="nav-text">2_1.4 js同步异步区别</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#node启动httpserver"><span class="nav-number">1.</span> <span class="nav-text">node启动httpserver</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Js同步异步"><span class="nav-number">2.</span> <span class="nav-text">Js同步异步</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-输出文件夹下文件"><span class="nav-number">2.1.</span> <span class="nav-text">2_1.1 输出文件夹下文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-js程序模块化和程序可读性"><span class="nav-number">2.2.</span> <span class="nav-text">2_1.2 js程序模块化和程序可读性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-js封装继承多态经典案例"><span class="nav-number">2.3.</span> <span class="nav-text">2_1.3 js封装继承多态经典案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4-js同步异步区别"><span class="nav-number">2.4.</span> <span class="nav-text">2_1.4 js同步异步区别</span></a></li></ol></li></ol></div>
             
 
           </div>
