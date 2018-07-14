@@ -90,7 +90,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://www.arunyang.com/2018/06/28/003课件7_7.generator+async-wait/Users/00arunalldata00/009_mystudy/012_mygithub_blog/itcomputer12.github.io/arunyang/source/_posts/2018069/001.png">
 <meta property="og:image" content="http://www.arunyang.com/2018/06/28/003课件7_7.generator+async-wait/Users/00arunalldata00/009_mystudy/012_mygithub_blog/itcomputer12.github.io/arunyang/source/_posts/2018069/002.jpg">
-<meta property="og:updated_time" content="2018-06-28T00:56:00.000Z">
+<meta property="og:updated_time" content="2018-07-14T09:13:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="arunyang">
 <meta name="twitter:description" content="[TOC] generator+async await1.1 源码讲解 redux-saga    koa1.0 generator --&amp;gt; kos async await 1.1.1 是否可迭代比较  1234567891011let arr = &amp;#123; 0: 1, 1: 2, length: 2&amp;#125; //给类数组增加可迭代的函数才可以迭代for (let item of a">
@@ -387,6 +387,7 @@
 <h3 id="1-1-1-是否可迭代比较"><a href="#1-1-1-是否可迭代比较" class="headerlink" title="1.1.1 是否可迭代比较"></a>1.1.1 是否可迭代比较</h3><blockquote>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = &#123; <span class="number">0</span>: <span class="number">1</span>, <span class="number">1</span>: <span class="number">2</span>, <span class="attr">length</span>: <span class="number">2</span>&#125; <span class="comment">//给类数组增加可迭代的函数才可以迭代</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> arr)&#123; <span class="comment">//报错=&gt; TypeError: arr is not iterable</span></span><br><span class="line"><span class="comment">// for (let item of [1,2,3])&#123;</span></span><br><span class="line">    <span class="built_in">console</span>.log(item);</span><br><span class="line">&#125; <span class="comment">//输出=&gt; 1 2 3</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> <span class="built_in">arguments</span>)&#123; <span class="comment">//arguments不是数组</span></span><br><span class="line">        <span class="built_in">console</span>.log(item)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">a(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>) <span class="comment">//输出=&gt; 1 2 3</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="1-1-2实现迭代器"><a href="#1-1-2实现迭代器" class="headerlink" title="1.1.2实现迭代器"></a>1.1.2实现迭代器</h3><blockquote>
 <p><strong>生成器返回的是迭代器</strong></p>
 </blockquote>
