@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="###1.1.1 reduce方法12345678910var a = [1,2,3,4,5]/*求和*/var sum = a.reduce((x,y)=&amp;gt;x+y,0);console.log(sum);/*求积*/var product = a.reduce((x,y)=&amp;gt;x*y,1);console.log(product);/*求最大值*/var max = a.redu">
+<meta name="description" content="1.1.1 reduce方法12345678910var a = [1,2,3,4,5]/*求和*/var sum = a.reduce((x,y)=&amp;gt;x+y,0);console.log(sum);/*求积*/var product = a.reduce((x,y)=&amp;gt;x*y,1);console.log(product);/*求最大值*/var max = a.reduce(">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js系列之数据常用方法详解">
 <meta property="og:url" content="http://www.arunyang.com/2018/08/05/20180805063755/index.html">
 <meta property="og:site_name" content="arunyang">
-<meta property="og:description" content="###1.1.1 reduce方法12345678910var a = [1,2,3,4,5]/*求和*/var sum = a.reduce((x,y)=&amp;gt;x+y,0);console.log(sum);/*求积*/var product = a.reduce((x,y)=&amp;gt;x*y,1);console.log(product);/*求最大值*/var max = a.redu">
+<meta property="og:description" content="1.1.1 reduce方法12345678910var a = [1,2,3,4,5]/*求和*/var sum = a.reduce((x,y)=&amp;gt;x+y,0);console.log(sum);/*求积*/var product = a.reduce((x,y)=&amp;gt;x*y,1);console.log(product);/*求最大值*/var max = a.reduce(">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://www.arunyang.com/2018/08/05/20180805063755/001.png">
-<meta property="og:updated_time" content="2018-08-07T01:58:37.000Z">
+<meta property="og:updated_time" content="2018-08-07T02:00:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js系列之数据常用方法详解">
-<meta name="twitter:description" content="###1.1.1 reduce方法12345678910var a = [1,2,3,4,5]/*求和*/var sum = a.reduce((x,y)=&amp;gt;x+y,0);console.log(sum);/*求积*/var product = a.reduce((x,y)=&amp;gt;x*y,1);console.log(product);/*求最大值*/var max = a.redu">
+<meta name="twitter:description" content="1.1.1 reduce方法12345678910var a = [1,2,3,4,5]/*求和*/var sum = a.reduce((x,y)=&amp;gt;x+y,0);console.log(sum);/*求积*/var product = a.reduce((x,y)=&amp;gt;x*y,1);console.log(product);/*求最大值*/var max = a.reduce(">
 <meta name="twitter:image" content="http://www.arunyang.com/2018/08/05/20180805063755/001.png">
 
 
@@ -405,7 +405,7 @@
         <p><img src="/2018/08/05/20180805063755/001.png" style="border:none;"></p>
 <hr>
 
-<p>###1.1.1 reduce方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="comment">/*求和*/</span></span><br><span class="line"><span class="keyword">var</span> sum = a.reduce(<span class="function">(<span class="params">x,y</span>)=&gt;</span>x+y,<span class="number">0</span>);</span><br><span class="line"><span class="built_in">console</span>.log(sum);</span><br><span class="line"><span class="comment">/*求积*/</span></span><br><span class="line"><span class="keyword">var</span> product = a.reduce(<span class="function">(<span class="params">x,y</span>)=&gt;</span>x*y,<span class="number">1</span>);</span><br><span class="line"><span class="built_in">console</span>.log(product);</span><br><span class="line"><span class="comment">/*求最大值*/</span></span><br><span class="line"><span class="keyword">var</span> max = a.reduce(<span class="function">(<span class="params">x,y</span>)=&gt;</span>(x&gt;y)?x:y);</span><br><span class="line"><span class="built_in">console</span>.log(max);</span><br></pre></td></tr></table></figure></p>
+<h3 id="1-1-1-reduce方法"><a href="#1-1-1-reduce方法" class="headerlink" title="1.1.1 reduce方法"></a>1.1.1 reduce方法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="comment">/*求和*/</span></span><br><span class="line"><span class="keyword">var</span> sum = a.reduce(<span class="function">(<span class="params">x,y</span>)=&gt;</span>x+y,<span class="number">0</span>);</span><br><span class="line"><span class="built_in">console</span>.log(sum);</span><br><span class="line"><span class="comment">/*求积*/</span></span><br><span class="line"><span class="keyword">var</span> product = a.reduce(<span class="function">(<span class="params">x,y</span>)=&gt;</span>x*y,<span class="number">1</span>);</span><br><span class="line"><span class="built_in">console</span>.log(product);</span><br><span class="line"><span class="comment">/*求最大值*/</span></span><br><span class="line"><span class="keyword">var</span> max = a.reduce(<span class="function">(<span class="params">x,y</span>)=&gt;</span>(x&gt;y)?x:y);</span><br><span class="line"><span class="built_in">console</span>.log(max);</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 
       
@@ -548,8 +548,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -686,6 +695,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-reduce方法"><span class="nav-number">1.</span> <span class="nav-text">1.1.1 reduce方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
