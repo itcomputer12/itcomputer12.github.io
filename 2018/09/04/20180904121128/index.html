@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Devops,CI/CD," />
 
 
 
@@ -81,17 +81,20 @@
 
 
 
-<meta name="description" content="Seeking truth from facts, not being self-righteous">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://www.arunyang.com/categories/index.html">
+<meta name="description" content="代码发布在一个产品生命周期中发挥着至关重要的作用,甚至可以说是伴随着一个产品的生命周期。代码发布系统有比较成熟的和其它系统集成的CI/CD系统，也有很灵活的各种插件的集成发布系统(例如jenkins)，也有小型的为了满足小规模小系统的需求的系统。最原始运维是手动的发布新的代码,然后覆盖老的代码这种方式,本文一步步带你实现如何把手动的经验累积为一个小的发布系统,释放双手,界面如上图所示。">
+<meta name="keywords" content="Devops,CI&#x2F;CD">
+<meta property="og:type" content="article">
+<meta property="og:title" content="带你手撸一个小型发布系统">
+<meta property="og:url" content="http://www.arunyang.com/2018/09/04/20180904121128/index.html">
 <meta property="og:site_name" content="arunyang">
-<meta property="og:description" content="Seeking truth from facts, not being self-righteous">
+<meta property="og:description" content="代码发布在一个产品生命周期中发挥着至关重要的作用,甚至可以说是伴随着一个产品的生命周期。代码发布系统有比较成熟的和其它系统集成的CI/CD系统，也有很灵活的各种插件的集成发布系统(例如jenkins)，也有小型的为了满足小规模小系统的需求的系统。最原始运维是手动的发布新的代码,然后覆盖老的代码这种方式,本文一步步带你实现如何把手动的经验累积为一个小的发布系统,释放双手,界面如上图所示。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-14T09:45:10.000Z">
+<meta property="og:image" content="http://www.arunyang.com/2018/09/04/20180904121128/20180904121622.png">
+<meta property="og:updated_time" content="2018-09-04T04:48:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-<meta name="twitter:description" content="Seeking truth from facts, not being self-righteous">
+<meta name="twitter:title" content="带你手撸一个小型发布系统">
+<meta name="twitter:description" content="代码发布在一个产品生命周期中发挥着至关重要的作用,甚至可以说是伴随着一个产品的生命周期。代码发布系统有比较成熟的和其它系统集成的CI/CD系统，也有很灵活的各种插件的集成发布系统(例如jenkins)，也有小型的为了满足小规模小系统的需求的系统。最原始运维是手动的发布新的代码,然后覆盖老的代码这种方式,本文一步步带你实现如何把手动的经验累积为一个小的发布系统,释放双手,界面如上图所示。">
+<meta name="twitter:image" content="http://www.arunyang.com/2018/09/04/20180904121128/20180904121622.png">
 
 
 
@@ -121,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://www.arunyang.com/categories/"/>
+  <link rel="canonical" href="http://www.arunyang.com/2018/09/04/20180904121128/"/>
 
 
 
 
 
-  <title>categories | arunyang</title>
+  <title>带你手撸一个小型发布系统 | arunyang</title>
   
 
 
@@ -287,40 +290,229 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.arunyang.com/2018/09/04/20180904121128/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="arunyang">
+      <meta itemprop="description" content="a running people">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="arunyang">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                目前共计 4 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Golang/">Golang</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/NodeJS/">NodeJS</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">2</span></li></ul>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">带你手撸一个小型发布系统</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-04T12:11:28+08:00">
+                2018-09-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/09/04/20180904121128/" class="leancloud_visitors" data-flag-title="带你手撸一个小型发布系统">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p><img src="/2018/09/04/20180904121128/20180904121622.png" style="border:none;"></p>
+<hr>
+
+<blockquote>
+<p>代码发布在一个产品生命周期中发挥着至关重要的作用,甚至可以说是伴随着一个产品的生命周期。代码发布系统有比较成熟的和其它系统集成的CI/CD系统，也有很灵活的各种插件的集成发布系统(例如jenkins)，也有小型的为了满足小规模小系统的需求的系统。最原始运维是手动的发布新的代码,然后覆盖老的代码这种方式,本文一步步带你实现如何把手动的经验累积为一个小的发布系统,释放双手,界面如上图所示。</p>
+<a id="more"></a>
+</blockquote>
+<h2 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h2><blockquote>
+<p>代码依赖:cat requirements.txt<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">Babel==<span class="number">0.9</span><span class="number">.6</span></span><br><span class="line">backports.ssl-match-hostname==<span class="number">3.4</span><span class="number">.0</span><span class="number">.2</span></span><br><span class="line">chardet==<span class="number">2.2</span><span class="number">.1</span></span><br><span class="line">click==<span class="number">6.7</span></span><br><span class="line">configobj==<span class="number">4.7</span><span class="number">.2</span></span><br><span class="line">decorator==<span class="number">3.4</span><span class="number">.0</span></span><br><span class="line">Flask==<span class="number">0.12</span><span class="number">.2</span></span><br><span class="line">Flask-SQLAlchemy==<span class="number">2.0</span></span><br><span class="line">iniparse==<span class="number">0.4</span></span><br><span class="line">iotop==<span class="number">0.6</span></span><br><span class="line">itsdangerous==<span class="number">0.24</span></span><br><span class="line">Jinja2==<span class="number">2.7</span><span class="number">.2</span></span><br><span class="line">kitchen==<span class="number">1.1</span><span class="number">.1</span></span><br><span class="line">M2Crypto==<span class="number">0.21</span><span class="number">.1</span></span><br><span class="line">MarkupSafe==<span class="number">0.11</span></span><br><span class="line">meld3==<span class="number">1.0</span><span class="number">.2</span></span><br><span class="line">msgpack-python==<span class="number">0.4</span><span class="number">.6</span></span><br><span class="line">pycrypto==<span class="number">2.6</span><span class="number">.1</span></span><br><span class="line">pycurl==<span class="number">7.19</span><span class="number">.0</span></span><br><span class="line">pygobject==<span class="number">3.8</span><span class="number">.2</span></span><br><span class="line">pygpgme==<span class="number">0.3</span></span><br><span class="line">pyliblzma==<span class="number">0.5</span><span class="number">.3</span></span><br><span class="line">pyudev==<span class="number">0.15</span></span><br><span class="line">pyxattr==<span class="number">0.5</span><span class="number">.1</span></span><br><span class="line">PyYAML==<span class="number">3.10</span></span><br><span class="line">pyzmq==<span class="number">14.3</span><span class="number">.1</span></span><br><span class="line">requests==<span class="number">2.6</span><span class="number">.0</span></span><br><span class="line">salt==<span class="number">2015.5</span><span class="number">.8</span></span><br><span class="line">six==<span class="number">1.3</span><span class="number">.0</span></span><br><span class="line">SQLAlchemy==<span class="number">1.1</span><span class="number">.11</span></span><br><span class="line">supervisor==<span class="number">3.3</span><span class="number">.1</span></span><br><span class="line">supervisor-quick==<span class="number">0.1</span><span class="number">.4</span></span><br><span class="line">urlgrabber==<span class="number">3.10</span></span><br><span class="line">urllib3==<span class="number">1.10</span><span class="number">.2</span></span><br><span class="line">virtualenv==<span class="number">13.1</span><span class="number">.2</span></span><br><span class="line">Werkzeug==<span class="number">0.12</span><span class="number">.2</span></span><br><span class="line">yum-metadata-parser==<span class="number">1.1</span><span class="number">.4</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>如何使用参考: <a href="https://blog.csdn.net/loyachen/article/details/52028825" target="_blank" rel="noopener">https://blog.csdn.net/loyachen/article/details/52028825</a></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Donate comment here</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="arunyang 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="arunyang 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Devops/" rel="tag"># Devops</a>
+          
+            <a href="/tags/CI-CD/" rel="tag"># CI/CD</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/30/20180830124045/" rel="next" title="Golang之添加"Example"代码注释">
+                <i class="fa fa-chevron-left"></i> Golang之添加"Example"代码注释
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -329,6 +521,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzQxOS8xMzk1Mw"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -351,8 +552,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -489,6 +699,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#代码演示"><span class="nav-number">1.</span> <span class="nav-text">代码演示</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -665,6 +891,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
