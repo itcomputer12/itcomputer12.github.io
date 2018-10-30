@@ -299,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.arunyang.com/2018/06/17/008课件8fs/">
+    <link itemprop="mainEntityOfPage" href="http://www.arunyang.com/2018/06/17/002课件3_3-6.promise基础应用及链式写法和实现和promise其他用法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="arunyang">
@@ -318,7 +318,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/06/17/008课件8fs/" itemprop="url">fs</a></h1>
+                <a class="post-title-link" href="/2018/06/17/002课件3_3-6.promise基础应用及链式写法和实现和promise其他用法/" itemprop="url">02课件3_3-6.promise基础应用及链式写法和实现和promise其他用法</a></h1>
         
 
         <div class="post-meta">
@@ -370,7 +370,7 @@
 
           
           
-             <span id="/2018/06/17/008课件8fs/" class="leancloud_visitors" data-flag-title="fs">
+             <span id="/2018/06/17/002课件3_3-6.promise基础应用及链式写法和实现和promise其他用法/" class="leancloud_visitors" data-flag-title="02课件3_3-6.promise基础应用及链式写法和实现和promise其他用法">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -403,18 +403,15 @@
       
         
           <p>[TOC]</p>
-<p>#fs模块</p>
-<p>##1.1</p>
-<p>###1.1.1 readFile函数</p>
-<blockquote>
-<p><a href="http://nodejs.cn/api/fs.html#fs_fs_readfile_path_options_callback" target="_blank" rel="noopener">readFile官网文档</a><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat 1.txt</span><br><span class="line">1234567890</span><br></pre></td></tr></table></figure></p>
+<h2 id="1-1实现promise"><a href="#1-1实现promise" class="headerlink" title="1.1实现promise"></a>1.1实现promise</h2><blockquote>
+<p>Promises/A+规范官网<br><strong><a href="https://promisesaplus.com/" target="_blank" rel="noopener">https://promisesaplus.com/</a></strong></p>
 </blockquote>
-<blockquote>
-<p>cat 1.reaFile.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fs=<span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="comment">//是把整个文件作为一个整体</span></span><br><span class="line">fs.readFile(<span class="string">'../1.txt'</span>,&#123;<span class="attr">encoding</span>:<span class="string">'utf8'</span>&#125;,<span class="function"><span class="keyword">function</span> (<span class="params">err,data</span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(err);	<span class="comment">//输出=&gt; 1234567890</span></span><br><span class="line">	<span class="built_in">console</span>.log(data);	<span class="comment">//输出=&gt; null</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//同步方法是没有回调函数的</span></span><br><span class="line"><span class="keyword">let</span> result=fs.readFileSync(<span class="string">'../1.txt'</span>,&#123;<span class="attr">encoding</span>: <span class="string">'utf8'</span>&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(result);	<span class="comment">//输出=&gt; 1234567890</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="1-1-1-promise特性一"><a href="#1-1-1-promise特性一" class="headerlink" title="1.1.1 promise特性一"></a>1.1.1 promise特性一</h3><blockquote>
+<p>promise会立即执行<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line"><span class="keyword">let</span> promise = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">3</span>);</span><br><span class="line"><span class="comment">/*输出=&gt;</span></span><br><span class="line"><span class="comment">2</span></span><br><span class="line"><span class="comment">1</span></span><br><span class="line"><span class="comment">3</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/06/17/008课件8fs/#more" rel="contents">
+            <a class="btn" href="/2018/06/17/002课件3_3-6.promise基础应用及链式写法和实现和promise其他用法/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
